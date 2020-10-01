@@ -23,8 +23,25 @@ engine.setProperty('voice', voices[1].id)
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
+   
+def wishMe():
+    hour = int(datetime.datetime.now().hour)
+    if hour>=0 and hour<12:
+        speak("Good Morning!")
 
+    elif hour>=12 and hour<18: 
+        speak("Good Afternoon!")   
 
+    else:
+        speak("Good Evening!")  
+
+    speak("I am Jarvis Sir. Please tell me how may I help you")
+    
+def online():
+    speak("hello sir.....,starting all systems applications...,installing all drivers")
+    
+    speak("every driver is installed...,all system have been started")
+    speak('ready to work for you...')
 
 def takeCommand():
     r = sr.Recognizer()
@@ -45,7 +62,13 @@ def takeCommand():
         query= "None"
     return query
 
-
+def graphics():
+    os.system('start C:\\Users\\rishu\\Desktop\\Jarvis\\Rainmeter')
+  
+def dt():
+    strTime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")    
+    print(f"Sir, the date and time is {strTime}")
+    speak(f"Sir, the date and time is {strTime}")  
 
 
 def weather():
@@ -320,8 +343,29 @@ def conditions():
 
         elif 'open google' in query:
             google()
-                
-        
+          
+        elif 'open gmail' in query:
+            url = "gmail.com"
+            chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
+            speak("opening gmail sir")
+            webbrowser.get(chrome_path).open(url)
+            speak("gmail closed sir")  
+            
+        elif 'open reddit' in query:
+            url = "reddit.com"
+            chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
+            speak("opening reddit sir")
+            webbrowser.get(chrome_path).open(url)
+            speak("reddit closed sir")
+            
+        elif 'open whatsapp' in query:
+            url = "web.whatsapp.com"
+            chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
+            speak("opening web whatsapp sir")
+            webbrowser.get(chrome_path).open(url)
+            speak(" web whatsapp closed  sir")     
+            
+            
         elif 'play music' in query:
             speak("ok sir...,starting required application..")
             speak("What do you want me to play for you...")
@@ -418,3 +462,7 @@ def conditions():
 
 speak("Initializing Jarvis...")
 conditions() 
+graphics()
+dt()
+wishMe()
+online()
