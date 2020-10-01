@@ -358,6 +358,13 @@ def conditions():
             webbrowser.get(chrome_path).open(url)
             speak("reddit closed sir")
             
+        elif 'open whatsapp' in query:
+            url = "web.whatsapp.com"
+            chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
+            speak("opening web whatsapp sir")
+            webbrowser.get(chrome_path).open(url)
+            speak(" web whatsapp closed  sir")     
+            
             
         elif 'play music' in query:
             speak("ok sir...,starting required application..")
