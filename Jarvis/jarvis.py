@@ -45,7 +45,8 @@ def takeCommand():
         query= "None"
     return query
 
-
+def graphics():
+    os.system('start C:\\Users\\rishu\\Desktop\\Jarvis\\Rainmeter')
 
 
 def weather():
@@ -418,3 +419,4 @@ def conditions():
 
 speak("Initializing Jarvis...")
 conditions() 
+graphics()
