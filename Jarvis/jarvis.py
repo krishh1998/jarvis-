@@ -47,6 +47,11 @@ def takeCommand():
 
 def graphics():
     os.system('start C:\\Users\\rishu\\Desktop\\Jarvis\\Rainmeter')
+  
+def dt():
+    strTime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")    
+    print(f"Sir, the date and time is {strTime}")
+    speak(f"Sir, the date and time is {strTime}")  
 
 
 def weather():
@@ -420,3 +425,4 @@ def conditions():
 speak("Initializing Jarvis...")
 conditions() 
 graphics()
+dt()
