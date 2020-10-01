@@ -1,1 +1,2 @@
 # jarvis-
+It is virtual assistance for windows which is completly created in python. It is similar to Siri and Google alexa which are present is in the market but it have few more features than that. It feartures are -it has ability to access all of the folder and applications present in our computer. Even it can easily access your mail and whatsapp and send message to anyone you want, you just have to give command to do that.Because it has ability to catch your voice and convert it into text format and respond accordingly.
