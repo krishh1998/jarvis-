@@ -344,13 +344,21 @@ def conditions():
         elif 'open google' in query:
             google()
           
-       elif 'open gmail' in query:
+        elif 'open gmail' in query:
             url = "gmail.com"
             chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
             speak("opening gmail sir")
             webbrowser.get(chrome_path).open(url)
-            speak("gmail closed sir")            
-        
+            speak("gmail closed sir")  
+            
+        elif 'open reddit' in query:
+            url = "reddit.com"
+            chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
+            speak("opening reddit sir")
+            webbrowser.get(chrome_path).open(url)
+            speak("reddit closed sir")
+            
+            
         elif 'play music' in query:
             speak("ok sir...,starting required application..")
             speak("What do you want me to play for you...")
